@@ -1,0 +1,26 @@
+{
+  "name": "lint-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run tsc && npm run tslint && npm run eslint",
+    "tslint": "tslint --project tsconfig.json --config tslint.json ",
+    "eslint": "eslint \"*/**/*.{js,ts}\" --quiet --fix",
+    "tsc": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-typescript": "^0.14.0",
+    "pre-commit": "^1.2.2",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.5.3",
+    "typescript-eslint-parser": "^22.0.0"
+  }
+}
